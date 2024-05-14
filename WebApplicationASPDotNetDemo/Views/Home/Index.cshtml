@@ -2,7 +2,47 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>@TempData["company"]</h2>
+
+<h3>
+    @ViewData["message"]
+</h3>
+
+<p>
+    @ViewData["message"]
+</p>
+
+<h3>City List</h3>
+
+<ol>
+    @foreach(string item in (IEnumerable<string>)ViewData["cities"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ol>
+
+<h3>Product List</h3>
+<ol>
+    @foreach (string item in (IEnumerable<string>)ViewData["product"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ol>
+<p>-----------------------------------------------------</p>
+<p>ViewBag Example</p>
+
+<p>@ViewBag.Message</p>
+
+
+<ol>
+    @foreach (string item in ViewBag.Cities)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ol>

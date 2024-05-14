@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Page1";
+}
+
+<h1>Page1</h1>
+
+<form>
+    <p>
+    User Name : <input type="text" name="username" value="username" />
+    </p>
+    <p>
+    Name      : @Html.TextBox("name")
+    </p>
+    <p>
+        Select City : @Html.DropDownList("cities")
+    </p>
+
+    <p>
+        Select Gender : @Html.RadioButton("gender", "Male")Male
+                        @Html.RadioButton("gender", "Female")Female
+    </p>
+
+    <p>
+        Select City :  @Html.ListBox("city")
+    </p>
+
+</form>
+
